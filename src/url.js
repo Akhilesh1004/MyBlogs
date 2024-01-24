@@ -1,2 +1,2 @@
-export const URL = "http://localhost:5000"
-export const IF = "http://localhost:5000/images/"
+export const URL = "myblogs-api:10000"
+export const IF = "myblogs-api:10000/images/"
