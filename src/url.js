@@ -1,2 +1,2 @@
-export const URL = "http://myblogs-api:10000"
-export const IF = "http://myblogs-api:10000/images/"
+export const URL = "https://myblogs-api.onrender.com"
+export const IF = "https://myblogs-api.onrender.com/images/"
