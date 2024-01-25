@@ -20,10 +20,10 @@ const Navbar = ({myblog}) => {
       <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-md">
           <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
             {myblog ? <h1 className="text-lg md:text-xl font-extrabold"><Link to='/'>{myblog}'s Blog</Link></h1>:
-            <h1 className="text-lg md:text-xl font-extrabold"><Link to='/'>My Blogs</Link></h1>}
+            <h1 className="text-lg md:text-xl font-extrabold min-w-[82px] pr-2"><Link to='/'>My Blogs</Link></h1>}
             {path==='/' && <div className='flex justify-center items-center space-x-0'>
               <p onClick={()=>navigate(prompt ? "?search="+prompt : '/')} className='cursor-pointer'><FaSearch /></p>
-              <input onChange={(e)=>setPrompt(e.target.value)} className='outline-none px-3 min-w-[150px]' placeholder='Search a post' type='text' />
+              <input onChange={(e)=>setPrompt(e.target.value)} className='outline-none px-3' placeholder='Search a post' type='text' />
             </div>}
             <div className="hidden md:flex items-center justify-center space-x-2 md:space-x-4">
               {user ? <h3><Link to='/write'>Write</Link></h3> : <h3><Link to='/login'>Login</Link></h3>}
