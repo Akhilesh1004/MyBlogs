@@ -90,7 +90,9 @@ const PostDetails = () => {
                 </div>}
             </div>
             <div className="flex items-center justify-between mt-2 md:mt-4">
-                <p>@{post.username}</p>
+                <Link key={post._id} to={'/myblog/'+post.user_id}>
+                    <p className='hover:text-black'>@{post.username}</p>
+                </Link>
                 <div className="flex space-x-2">
                     <p>{new Date(post.updatedAt).toDateString()}</p>
                     <p>{new Date(post.updatedAt).toLocaleTimeString()}</p>
