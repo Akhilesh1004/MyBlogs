@@ -101,7 +101,7 @@ const PostDetails = () => {
             {post.photo && (
                         <img src={IF + post.photo} className="w-full mx-auto mt-8" alt="" />
                     )}
-            <p className="mx-auto mt-8">{post.desc}</p>
+            <p className="mx-auto mt-8 whitespace-pre-wrap">{post.desc}</p>
             <div className="flex items-center mt-8 space-x-4 font-semibold">
                 <p>Categories:</p>
                 <div className="flex justify-center items-center space-x-2">
