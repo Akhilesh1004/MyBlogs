@@ -12,6 +12,8 @@ import { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import Loader from "../components/Loader"
 import {Link, useNavigate} from 'react-router-dom'
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.bubble.css';
 
 const PostDetails = () => {
     const post_id = useParams().id
@@ -101,7 +103,7 @@ const PostDetails = () => {
             {post.photo && (
                         <img src={IF + post.photo} className="w-full mx-auto mt-8" alt="" />
                     )}
-            <p className="mx-auto mt-8 whitespace-pre-wrap">{post.desc}</p>
+            <ReactQuill value={post.desc} readOnly={true} theme={"bubble"} className="mx-auto mt-8 whitespace-pre-wrap" />
             <div className="flex items-center mt-8 space-x-4 font-semibold">
                 <p>Categories:</p>
                 <div className="flex justify-center items-center space-x-2">

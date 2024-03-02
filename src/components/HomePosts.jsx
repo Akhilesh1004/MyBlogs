@@ -1,5 +1,7 @@
 import {IF} from '../url'
 import {Link} from 'react-router-dom'
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
 
 const HomePosts = ({post}) => {
     return (

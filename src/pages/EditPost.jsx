@@ -8,6 +8,9 @@ import axios from "axios";
 import { URL } from "../url";
 import {Link, useNavigate, useParams} from 'react-router-dom'
 import { useEffect } from "react";
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
+
 
 const EditPost = () => {
     const [title, setTitle] = useState('')
@@ -104,7 +107,22 @@ const EditPost = () => {
                         ))}
                     </div>
                 </div>
-                <textarea onChange={(e)=>setDesc(e.target.value)} value={desc} rows={15} cols={30} className="px-4 py-2 outline-none" placeholder="Enter post description" />
+                <ReactQuill modules={{
+                                    toolbar: [
+                                    [{ 'font': [] }],
+                                    [{ 'size': ['small', false, 'large', 'huge'] }],
+                                    [{ 'align': [] }],
+                                    ['bold', 'italic', 'underline', 'strike'],
+                                    [{ 'color': [] }],
+                                    [{ 'background': [] }],
+                                    [{ 'script': 'sub' }, { 'script': 'super' }],
+                                    ['blockquote', 'code-block'],
+                                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                                    ['link'],
+                                    ['code-block'],
+                                    ['clean']
+                                    ]
+                                }} onChange={setDesc} value={desc} className="px-4 py-2 outline-none" placeholder="Enter post description" />
                 <button onClick={handleUpdated} className="bg-black w-full md:w-[20%] mx-auto text-white font-semibold px-4 py-2 md:text-xl text-lg">Update</button>
             </form>
         </div>

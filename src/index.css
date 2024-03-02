@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ql-editor {
+    font-size: 16px;
+  }
+.ql-bubble .ql-editor {
+    font-size: 20px;
+}
